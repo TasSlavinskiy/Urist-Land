@@ -1,0 +1,501 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="Составление  документов  и  сопровождение
+ любых сделок с недвижимостью, Сочи">
+<meta name="keywords" content="Юридическое сопровождение сделок с недвижимостью, Сочи, рег.палата, техпаспорт, кадастровый паспорт, свидетельство на квартиру, свидетельсто на дом, регистрация ИП, регистрация ООО, оформление купли-продажи квартиры, оформление дарения квартиры, офор">
+<link href="style.css" type="text/css" rel="stylesheet" />
+<!--<link href="reset.css" type="text/css" rel="stylesheet" />-->
+<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,300italic,400italic,700&subset=latin,cyrillic,cyrillic-ext' rel='stylesheet' type='text/css'>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript" src="fancybox/jquery.fancybox63b9.js?v=2.1.4"></script>
+<link rel="stylesheet" type="text/css" href="fancybox/jquery.fancybox63b9.css?v=2.1.4" media="screen" />
+<link rel="icon" type="image/png" href="favicon.ico" />
+<script type="text/javascript">
+      $(function() {
+		$(".fancybox").fancybox();
+		
+		//МЕСЯЦЫ В РОДИТЕЛЬНОМ ПАДЕЖЕ
+	var months = ["января", "февраля", "марта", "апреля", "мая", "июня",
+		"июля", "августа", "сентября", "октября", "ноября", "декабря"];
+	
+	 var date1 = new Date();
+	 var today = date1.getDate();
+	 var current_month = date1.getMonth();
+	 date1.setDate(today - 7);
+	 var from = date1.getDate();
+	 var from_month = months[date1.getMonth()];
+	 
+	 var date2 = new Date(); 
+	 date2.setDate(today + 1);
+	 var to = date2.getDate();
+	 var to_month = months[date2.getMonth()];
+	 
+	 from_month = (from_month == to_month)? "" : from_month;
+	 $("#share_from").html(from);
+	 $("#share_from_month").html(from_month);
+	 $("#share_to").html(to);
+	 $("#share_to_month").html(to_month);
+     });
+</script> 
+
+<script>
+	function counter(){
+  var now = new Date();   
+  var finDate = new Date();//Достаем текущую дату
+  finDate.setDate(finDate.getDate()+2);//Увеличиваем текущую дату на 1 день
+  finDate.setHours(0);//Обнуляем часы
+  finDate.setMinutes(0);//ОБнуляем минуты
+  finDate.setSeconds(0);//ОБнуляем секунды
+  var totalRemains = (finDate.getTime() - now.getTime());
+  if (totalRemains > 1){
+   var RemainsSec = (parseInt(totalRemains / 1000));
+   var RemainsFullDays = (parseInt(RemainsSec/(24 * 60 * 60)));
+    if (RemainsFullDays < 10){
+    RemainsFullDays = "0" + RemainsFullDays
+   };
+   var secInLastDay = RemainsSec-RemainsFullDays * 24 * 3600;
+   var RemainsFullHours = (parseInt(secInLastDay / 3600));
+   if (RemainsFullHours < 10){
+    RemainsFullHours = "0" + RemainsFullHours
+   };
+   var secInLastHour = secInLastDay - RemainsFullHours * 3600;
+   var RemainsMinutes = (parseInt(secInLastHour / 60));
+   if (RemainsMinutes < 10){
+    RemainsMinutes = "0" + RemainsMinutes
+   };
+   var lastSec = secInLastHour - RemainsMinutes * 60;
+   if (lastSec < 10){
+    lastSec = "0" + lastSec
+   };
+   
+   //$(".days").html(RemainsFullDays);
+   $(".hours").html(RemainsFullHours);
+   $(".minutes").html(RemainsMinutes);
+   $(".seconds").html(lastSec);
+  }
+  else {
+   $(".counter").html("Время вышло.");
+  }
+ };
+ setInterval(counter, 1000);  
+
+
+</script>
+
+<script>
+	function validate(event) {
+	var isFormValid = true;
+	$(event.target).find(".required").each(function(){
+		if ($.trim($(this).val()).length == 0){
+			$(this).parent().addClass("highlight");
+			isFormValid = false;
+        } else {
+			$(this).parent().removeClass("highlight");
+        }
+	});
+	if (!isFormValid){
+		alert("Заполните, пожалуйста, обязательные поля");
+		event.preventDefault();
+	}
+	return isFormValid;
+};
+
+</script>
+
+<title>Юридическое сопровождение КВАРТАЛ</title>
+</head>
+<body>
+<div class="wrapper">
+
+<div class="box1">
+<div class="box1C">
+<div class="logoText">Юридическое агентство &laquo;Квартал&raquo;, г. Сочи, ул. Ленина 10а<br />
+<b>Оформление документов&nbsp;</b> <b>по сделкам</b><br />
+<b>с недвижимостью опытными юристами</b></div>
+
+<ul class="phones">
+	<li>8(800) 500-85-05</li>
+	<li><b>8-918-003-09-33</b></li>
+</ul>
+
+<ul class="topBtn">
+	<li>Неудобно звонить?</li>
+	<li><a class="fancybox" href="#form1div">ЗАКАЗАТЬ обратный звонок!</a></li>
+</ul>
+</div>
+</div>
+<div class="box2">
+<div class="box2C" style="position: relative;"><!--<img src="img/arrow.png" style="position: absolute; top: 210px; left: 475px; opacity: 0.5;width: 180px;">-->
+<h1>Оформление любых сделок с недвижимостью квалифицированными юристами, Сочи</h1>
+
+<h2>&nbsp;</h2>
+
+<div class="actBg">
+<h2>Акция</h2>
+
+<ul class="actText">
+	<li>c <span id="share_from">_</span> <span id="share_from_month">_</span> по <span id="share_to">_</span> <span id="share_to_month">_</span></li>
+	<li>СКИДКА 60%</li>
+	<li>для всех тарифов</li>
+</ul>
+<span class="end">до конца акции осталось:</span>
+
+<ul class="actNum counter">
+	<li>01</li>
+	<li class="hours">00</li>
+	<li class="minutes">00</li>
+	<li class="seconds">00</li>
+</ul>
+</div>
+
+<div class="mainForm">
+<form action="form2.php" method="post" onsubmit="validate(event)"><input name="what" type="hidden" value="form2" /> <input name="bot" type="hidden" />
+<ul>
+	<li><b>Закажите консультацию юриста прямо сейчас</b>!</li>
+	<li><input class="required" name="fio" placeholder="Введите Ваше имя" type="text" /></li>
+	<li><input class="required" name="phone" placeholder="Введите Ваш телефон" type="text" /></li>
+	<li><button type="submit">ЗАКАЗАТЬ<br />
+	бесплатную консультацию</button></li>
+</ul>
+</form>
+</div>
+
+<ul class="prem">
+	<li>100%-корректные<br />
+	документы. Юристы</li>
+	<li>Экономия времени<br />
+	до 2 недель</li>
+	<li>Доступные цены - за счет качественных</li>
+	<li>услуг и большого потока клиентов.</li>
+</ul>
+</div>
+</div>
+<div class="box3">
+<div class="box3C"><a class="button-blue fancybox" href="#predl" style="display: block; text-decoration: none; margin: 10px auto; text-align: center;width: 390px;line-height: 33px;height: 38px;">Вы риэлтор? заработайте 10.000 руб. ЖМИТЕ</a>
+<h1>Выберите свой тариф:</h1>
+
+<div class="tarif">
+<ul>
+	<li><b>Договор</b><br />
+	Только договор</li>
+	<li><i>Составление договора купли-продажи, мены, дарения, аренды, задатка, аванса, предварительного договора</i></li>
+	<li><span>3 000 руб</span><br />
+	<span style="font-family: 'Times New Roman'; color: #000; font-weight: normal; text-decoration: none; font-size: 44px;">999 руб</span></li>
+	<li><a class="fancybox" href="#form3div"><span class="getit">ЗАКАЗАТЬ</span><br />
+	составление договора (Жмите)</a></li>
+</ul>
+
+<ul class="middle">
+	<li><b>Сопровождение</b><br />
+	Полное сопровождение</li>
+	<li>Составление договора купли-продажи, мены, дарения, аренды, задатка, аванса, предварительного договора<br />
+	&nbsp;
+	<div><span>Полное юридическое cопровождение</span> <span>Предварительный договор</span> <span>Основной договор купли-продажи</span> <span>Сбор и подготовка всех документов</span> <span>Акт приема-передач</span> <span>Проверка чистоты сделки</span></div>
+	</li>
+	<li><span>20 000 руб</span><br />
+	<span style="font-family: 'Times New Roman'; color: #000; font-weight: normal; text-decoration: none; font-size: 44px;">7 999 руб</span></li>
+	<li><a class="fancybox" href="#form4div"><span class="getit">ЗАКАЗАТЬ</span><br />
+	полное сопровождение (Жмите)</a></li>
+</ul>
+
+<ul>
+	<li><b>Узаконение</b><br />
+	ПЕРЕПЛАНИРОВОК</li>
+	<li>Cохранение перепланировки жилого помещения в перепланированном(переоборудованном) состоянии<br />
+	&nbsp;
+	<div class="vup" style="height: 184px"><span>Сбор документов:</span> <span>поэтажный план из БТИ,</span> <span>экспликации к нему</span> <span>свидетельство о праве собственности</span> <span>Разработка и согласование проекта;</span> <span>Внесение изменений в документацию объекта;</span> <span>Получение акта МЖК.</span></div>
+	</li>
+	<li style="margin-left:40px;"><span style="margin-left:5px;">50&nbsp;000 руб</span><br />
+	<span style="font-family: 'Times New Roman'; color: #000; font-weight: normal; text-decoration: none; font-size: 44px;">19 999 руб</span></li>
+	<li><a class="fancybox" href="#form5div"><span class="getit">ЗАКАЗАТЬ</span><br />
+	полный пакет (Жмите)</a></li>
+</ul>
+</div>
+
+<div class="tarifText">
+<h1>Дополнительные услуги:</h1>
+
+<h2>Каждую нашу услугу можно заказать и отдельно.</h2>
+
+<p>А так же мы осуществляем &nbsp;Регистрацию ООО и ИП, внесение изменений, Продажу недвижимости, Узаконение Перепланировок, Помощь в ускорении регистрации, &nbsp;Сопровождение ипотеки, Сопровождение военной ипотеки, Материнский капитал, Программа ветхое жилье, Чернобльский сертификат, Программа Молодая семья, и так далее.</p>
+</div>
+</div>
+</div>
+<div class="box4">
+<div class="box4C">
+<ul class="spTop">
+	<li>С какими проблемами сталкивается 95% людей<br />
+	при оформлении сделок с недвижимостью:</li>
+	<li>Как мы защитим Вас от этих проблем:</li>
+</ul>
+
+<ul class="prob">
+	<li><b>Неправильно составлен договор</b><br />
+	В результате peг. палата не пропускает договор и вы теряете время и деньги, а еще хуже может по недосмотру пропустить, и договор не будет иметь юридическую силу в дальнейшем.</li>
+	<li><b>Мошенники</b><br />
+	Недвижимость может находится под арестом или заложена. В результате вы теряете и деньги и недвижимость.</li>
+	<li><b>Долгие очереди</b><br />
+	Peг. палата может по несколько раз не одобрять ваш вариант договора по разным причинам. Вы тратите время, нервы и деньги.</li>
+	<li><b>Завышается цена</b><br />
+	Часто юридические компании озвучивают сначала одну цену, а затем она увеличивается по разным причинам - необходимо заплатить дополнительно гос. пошлину или решить вопросы с peг. палатой.</li>
+	<li><b>Оформляют не юристы</b><br />
+	Во многих компаниях оформлением сделок занимаются люди не имеющие юридического образования, потому допускают ошибки и регистрацию приостанавливают.</li>
+</ul>
+
+<ul class="solv">
+	<li><b>Гарантия регистрации 100%</b><br />
+	Вы получите 100% результат.У нас система регистрации отработана, есть свои люди в peг. палате. Заплатив нам, Вы получите 100% результат.</li>
+	<li><b>Проверка юридической чистоты.</b><br />
+	Вы уверенны в сделке, т.к. мы делаем официальный запрос и узнаем, сможете ли вы стать юридически полноценным владельцем квартиры. Проверка каждой сделки через службу безопасности при содействии структур МВД РФ.</li>
+	<li><b>Полное сопровождение</b><br />
+	Вы получаете консультацию. Мы с вами собираем полный комплект документов, берем на себя основные операции, содействие в беспрепятственном оформлении документов в peг. палате</li>
+	<li><b>Адекватная цена</b><br />
+	За счет больших объемов мы можем себе позволить снизить цены.&nbsp;Цена за сопровождение у многих компаний достигает 35.000 руб. - у нас 7999 руб.!!! за договор 3000 руб - у нас 999 руб.!!!</li>
+	<li><b>Высококвалифицированные, дипломированные юристы</b><br />
+	Вы получаете услуги дипломированных юристов. Все юристы нашей компании имеют большой опыт оказания юридических услуг в данной сфере не менее 6 лет.</li>
+</ul>
+</div>
+</div>
+<div class="box5">
+<div class="box5C">
+<div class="q"><img src="img/q.png" /></div>
+
+<h3>Остались вопросы?</h3>
+
+<h4>Начните с бесплатной консультации!</h4>
+
+<div class="midForm">
+<form action="form2.php" method="post" onsubmit="validate(event)"><input name="what" type="hidden" value="form6" /> <input name="bot" type="hidden" />
+<ul>
+	<li><input class="required" name="fio" placeholder="Введите Ваше имя" type="text" /></li>
+	<li><input class="required" name="phone" placeholder="Введите Ваш телефон" type="text" /></li>
+	<li><button type="submit">ЗАКАЗАТЬ<br />
+	бесплатную консультацию</button></li>
+</ul>
+</form>
+</div>
+
+<h1>Наши партнеры<br />
+<b>по ипотечным сделкам:</b></h1>
+<img class="part" src="img/part.jpg" /></div>
+</div>
+<div class="cap">Отзывы наших клиентов:</div>
+
+<div class="box6">
+<div class="box6C">
+<ul class="avaList">
+	<li><img src="img/feedAva1.png" /></li>
+	<li><img src="img/feedAva2.png" /></li>
+	<li><img src="img/feedAva3.png" /></li>
+	<li><img src="img/feedAva4.png" /></li>
+	<li><img src="img/feedAva5.png" /></li>
+	<li><img src="img/feedAva6.png" /></li>
+	<li><img src="img/feedAva7.png" /></li>
+	<li><img src="img/feedAva8.png" /></li>
+</ul>
+
+<ul class="feedBack">
+	<li><span style="font-family: Amst;font-size: 23px;">&laquo;Про фирму узнал через интернет, все устроило, спасибо&raquo;</span><br />
+	<b>Александр Фомин</b></li>
+	<li><span style="font-family: Amst;font-size: 23px;">&laquo;О фирме узнал через друзей, хорошие цены и быстрое оформление&raquo;</span><br />
+	<b>Александр Бабич</b></li>
+	<li><span style="font-family: Amst;font-size: 23px;position: relative;bottom: 10px;">&laquo;В Квартал обратились, увидев рекламу, спасибо за помощь и за экономию времени&raquo;</span><br />
+	<b style="position:relative;bottom: 10px;">Станислав и Татьяна Пересечные</b></li>
+	<li><span style="font-family: Amst;font-size: 23px;">&laquo;Посоветовали знакомые, важна была скорость выполнения заявки, с чем вы и справились&raquo;</span><br />
+	<b>Кристина Соболева</b></li>
+	<li><span style="font-family: Amst;font-size: 23px;">&laquo;На вас вышла через интернет, качественно, быстро, удобно. При выборе руководствовалась принципом цена-качество&raquo;</span><br />
+	<b>Лаура Эминова</b></li>
+	<li><span style="font-family: Amst;font-size: 23px;">&laquo;Знакомые посоветовали именно эту фирму, т.к. по приемлемой цене нам оказали качественные услуги. Плюсы: низкие цены, хорошее качество обслуживание. Спасибо вам большое мои дорогие.&raquo;</span><br />
+	<b>Полина Смотрова</b></li>
+	<li><span style="font-family: Amst;font-size: 23px;">&laquo;Ребят знаю не первый год, оформляю через них уже вторую квартиру&raquo;</span><br />
+	<b>Евгений Павленко</b></li>
+	<li><span style="font-family: Amst;font-size: 23px;">&laquo;Фирма хорошая, сотрудники вежливые. Спасибо за оперативность.&raquo;</span><br />
+	<b>Татьяна Маслова</b></li>
+</ul>
+</div>
+</div>
+<div class="cap">Схема нашей работы:</div>
+
+<div class="box7">
+<div class="box7C">
+<div class="shema"><span>Оставляете заявку<br />
+или звоните нам</span> <span>Получаете бесплатную<br />
+консультацию</span> <span>Вы приезжаете к нам в<br />
+офис или высылаете&nbsp;<br />
+документы по электронке</span> <span>Подписываем договор,<br />
+производите оплату</span> <span>Полное сопровождение<br />
+Вашей сделки</span> <span>Вы счастливый<br />
+обладатель своей<br />
+недвижисмости!</span></div>
+
+<h1>Выберите свой тариф:</h1>
+
+<div class="tarif">
+<ul>
+	<li><b>Минимум</b><br />
+	Только договор</li>
+	<li><i>Составление договора купли-продажи, мены, дарения, аренды, задатка, аванса, предварительного договора</i></li>
+	<li><span>3 000 руб</span><br />
+	<span style="font-family: 'Times New Roman'; color: #000; font-weight: normal; text-decoration: none; font-size: 44px;">999 руб</span></li>
+	<li><a class="fancybox" href="#form7div"><span class="getit">ЗАКАЗАТЬ</span><br />
+	составление договора (Жмите)</a></li>
+</ul>
+
+<ul class="middle">
+	<li><b>Стандарт</b><br />
+	Полное сопровождение</li>
+	<li>Составление договора купли-продажи, мены, дарения, аренды, задатка, аванса, предварительного договора<br />
+	&nbsp;
+	<div><span>Полное юридическое cопровождение</span> <span>Предварительный договор</span> <span>Основной договор купли-продажи</span> <span>Сбор и подготовка всех документов</span> <span>Акт приема-передач</span> <span>Проверка чистоты сделки</span></div>
+	</li>
+	<li><span>20 000 руб</span><br />
+	<span style="font-family: 'Times New Roman'; color: #000; font-weight: normal; text-decoration: none; font-size: 44px;">7 999 руб</span></li>
+	<li><a class="fancybox" href="#form8div"><span class="getit">ЗАКАЗАТЬ</span><br />
+	полное сопровождение (Жмите)</a></li>
+</ul>
+
+<ul>
+	<li><b>Полный пакет</b><br />
+	Никуда не надо ходить</li>
+	<li>Cоставление договора купли-продажи, мены, дарения, аренды, задатка, аванса, предварительного договора<br />
+	&nbsp;
+	<div class="vup" style="height: 184px"><span>Полное юридическое cопровождение</span> <span>Предварительный договор</span> <span>Основной договор купли-продажи</span> <span>Сбор и подготовка всех документов</span> <span>Акт приема-передач</span> <span>Проверка чистоты сделки</span> <span>Составляется доверенность на посещение нами всех необходимых инстанций</span> <span>Изготовление тех. документов</span></div>
+	</li>
+	<li style="margin-left:40px;"><span style="margin-left:5px;">35 000 руб</span><br />
+	<span style="font-family: 'Times New Roman'; color: #000; font-weight: normal; text-decoration: none; font-size: 44px;">13 999 руб</span></li>
+	<li><a class="fancybox" href="#form9div"><span class="getit">ЗАКАЗАТЬ</span><br />
+	полный пакет (Жмите)</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="box8" style="position: relative;"><script type="text/javascript" charset="utf-8" src="http://api-maps.yandex.ru/services/constructor/1.0/js/?sid=OH3JLFK0_K-CdOgVzBzWR40n312ofv_0"></script><!-- &height=275 -->
+<div class="box8C" style="position: absolute; top: 0; left: 50%; margin-left: -480px;">
+<div class="botForm" style="position: absolute; top: 0px;">
+<form action="form10.php" method="post" onsubmit="validate(event)"><input name="what" type="hidden" value="form10" /> <input name="bot" type="hidden" />
+<ul>
+	<li><b>Остались вопросы?</b><br />
+	Закажите бесплатную консультацию:</li>
+	<li><input class="required" name="fio" placeholder="Введите Ваше имя" type="text" /></li>
+	<li><input class="required" name="phone" placeholder="Введите Ваш телефон" type="text" /></li>
+	<li><textarea name="message" placeholder="Введите Ваш вопрос"></textarea></li>
+	<li><button type="submit">ЗАКАЗАТЬ<br />
+	бесплатную консультацию</button></li>
+</ul>
+</form>
+</div>
+
+<div class="botPhone" style="position: absolute; top: 0px; left: 650px;">
+<ul>
+	<li>8(918) 003-09-33</li>
+	<li>8(800) 500-85-05</li>
+	<li>Юридическое агентство &laquo;Квартал&raquo;<br />
+	Сочи, ул. Ленина 10а</li>
+</ul>
+</div>
+</div>
+</div>
+
+</div>
+
+<div id="form1div" style="display:none;">
+     <form method="post" action="form1.php" onsubmit="validate(event)">
+      <p style="font-size:20px;">Заказать звонок:</p><br>
+      <input type="text" name="fio" placeholder="Ваше имя" style="width:232px; height:25px; font-size:16px; margin-top:0px; padding-left:2px; border:1px solid #999;"><br>
+      <input type="text" name="phone" class="required" placeholder="Ваш телефон*" style="width:232px; height:25px; font-size:16px; margin-top:15px; padding-left:2px; border:1px solid #999;"><br>
+      <input type="text" name="bot" style="display:none;">
+      <input type="hidden" name="what" value="form1">
+      <input type="submit" value="Отправить" class="order_sub" style="margin-left:0px; padding:0;">
+     </form>
+</div>
+
+<div id="form3div" style="display:none;">
+     <form method="post" action="form3.php" onsubmit="validate(event)">
+      <p style="font-size:20px;">Заказать:</p><br>
+      <input type="text" name="fio" placeholder="Ваше имя" style="width:232px; height:25px; font-size:16px; margin-top:0px; padding-left:2px; border:1px solid #999;"><br>
+      <input type="text" name="phone" class="required" placeholder="Ваш телефон*" style="width:232px; height:25px; font-size:16px; margin-top:15px; padding-left:2px; border:1px solid #999;"><br>
+      <input type="text" name="bot" style="display:none;">
+      <input type="hidden" name="what" value="form3">
+      <input type="hidden" name="model" value="МИНИМУМ">
+      <input type="submit" value="Отправить" class="order_sub" style="margin-left:0px; padding:0;">
+     </form>
+</div>
+
+<div id="form4div" style="display:none;">
+     <form method="post" action="form4.php" onsubmit="validate(event)">
+      <p style="font-size:20px;">Заказать:</p><br>
+      <input type="text" name="fio" placeholder="Ваше имя" style="width:232px; height:25px; font-size:16px; margin-top:0px; padding-left:2px; border:1px solid #999;"><br>
+      <input type="text" name="phone" class="required" placeholder="Ваш телефон*" style="width:232px; height:25px; font-size:16px; margin-top:15px; padding-left:2px; border:1px solid #999;"><br>
+      <input type="text" name="bot" style="display:none;">
+      <input type="hidden" name="what" value="form4">
+      <input type="hidden" name="model" value="СТАНДАРТ">
+      <input type="submit" value="Отправить" class="order_sub" style="margin-left:0px; padding:0;">
+     </form>
+</div>
+
+<div id="form5div" style="display:none;">
+     <form method="post" action="form5.php" onsubmit="validate(event)">
+      <p style="font-size:20px;">Заказать:</p><br>
+      <input type="text" name="fio" placeholder="Ваше имя" style="width:232px; height:25px; font-size:16px; margin-top:0px; padding-left:2px; border:1px solid #999;"><br>
+      <input type="text" name="phone" class="required" placeholder="Ваш телефон*" style="width:232px; height:25px; font-size:16px; margin-top:15px; padding-left:2px; border:1px solid #999;"><br>
+      <input type="text" name="bot" style="display:none;">
+      <input type="hidden" name="what" value="form5">
+      <input type="hidden" name="model" value="ПОЛНЫЙ ПАКЕТ">
+      <input type="submit" value="Отправить" class="order_sub" style="margin-left:0px; padding:0;">
+     </form>
+</div>
+
+<div id="form7div" style="display:none;">
+     <form method="post" action="form3.php" onsubmit="validate(event)">
+      <p style="font-size:20px;">Заказать:</p><br>
+      <input type="text" name="fio" placeholder="Ваше имя" style="width:232px; height:25px; font-size:16px; margin-top:0px; padding-left:2px; border:1px solid #999;"><br>
+      <input type="text" name="phone" class="required" placeholder="Ваш телефон*" style="width:232px; height:25px; font-size:16px; margin-top:15px; padding-left:2px; border:1px solid #999;"><br>
+      <input type="text" name="bot" style="display:none;">
+      <input type="hidden" name="what" value="form7">
+      <input type="hidden" name="model" value="МИНИМУМ">
+      <input type="submit" value="Отправить" class="order_sub" style="margin-left:0px; padding:0;">
+     </form>
+</div>
+
+<div id="form8div" style="display:none;">
+     <form method="post" action="form4.php" onsubmit="validate(event)">
+      <p style="font-size:20px;">Заказать:</p><br>
+      <input type="text" name="fio" placeholder="Ваше имя" style="width:232px; height:25px; font-size:16px; margin-top:0px; padding-left:2px; border:1px solid #999;"><br>
+      <input type="text" name="phone" class="required" placeholder="Ваш телефон*" style="width:232px; height:25px; font-size:16px; margin-top:15px; padding-left:2px; border:1px solid #999;"><br>
+      <input type="text" name="bot" style="display:none;">
+      <input type="hidden" name="what" value="form8">
+      <input type="hidden" name="model" value="СТАНДАРТ">
+      <input type="submit" value="Отправить" class="order_sub" style="margin-left:0px; padding:0;">
+     </form>
+</div>
+
+<div id="form9div" style="display:none;">
+     <form method="post" action="form5.php" onsubmit="validate(event)">
+      <p style="font-size:20px;">Заказать:</p><br>
+      <input type="text" name="fio" placeholder="Ваше имя" style="width:232px; height:25px; font-size:16px; margin-top:0px; padding-left:2px; border:1px solid #999;"><br>
+      <input type="text" name="phone" class="required" placeholder="Ваш телефон*" style="width:232px; height:25px; font-size:16px; margin-top:15px; padding-left:2px; border:1px solid #999;"><br>
+      <input type="text" name="bot" style="display:none;">
+      <input type="hidden" name="what" value="form9">
+      <input type="hidden" name="model" value="ПОЛНЫЙ ПАКЕТ">
+      <input type="submit" value="Отправить" class="order_sub" style="margin-left:0px; padding:0;">
+     </form>
+</div>
+
+<div id="predl" style="display: none;">
+	<form method="post" action="form11.php" onsubmit="validate(event)">
+      <p style="font-size:17px;">Заработайте дополнительно<br> до 10000 рублей на сделке:</p><br>
+      <input type="text" name="fio" placeholder="Ваше имя" style="width:232px; height:25px; font-size:16px; margin-top:0px; padding-left:2px; border:1px solid #999;"><br>
+      <input type="text" name="phone" class="required" placeholder="Ваш телефон*" style="width:232px; height:25px; font-size:16px; margin-top:15px; padding-left:2px; border:1px solid #999;"><br>
+      <input type="text" name="bot" style="display:none;">
+      <input type="hidden" name="what" value="form11">
+      <input type="submit" value="Узнать как" class="order_sub" style="margin-left:0px; padding:0;">
+     </form>
+</div>
+
+</body>
+
+
+</html>
